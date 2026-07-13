@@ -26,7 +26,9 @@ The imaging model is deliberately compact but physically motivated:
   heavily jittered and randomly thinned, mimicking an amorphous inclusion or
   a grain boundary. Its whole footprint is one class.
 - Shot noise is Poisson, set by one ``dose`` parameter (mean electron counts
-  at the brightest column peak). A small Gaussian read term is added.
+  at the brightest host, i.e. non-dopant, column peak; a heavy dopant is
+  brighter still). An optional Gaussian read term (``read_noise``, off by
+  default) can be added on top.
 
 The label map is built geometrically from the exact column list, so it never
 depends on the noisy image. Everything is float ``(row, col)`` in pixels.
@@ -166,11 +168,15 @@ class SegConfig:
         disorder_jitter: Column displacement (px) inside the disordered region.
         disorder_thinning: Fraction of columns dropped inside the disordered
             region (it still scatters, just incoherently).
-        background: Constant pedestal as a fraction of the brightest peak.
+        background: Constant pedestal as a fraction of the brightest host
+            column peak.
         background_variation: Amplitude of a smooth low-frequency background.
-        read_noise: Gaussian read noise standard deviation, in dose units.
-        dose: Mean electron counts at the brightest column peak (sets shot
-            noise). Lower dose is noisier.
+        read_noise: Gaussian read-noise standard deviation, in dose units.
+            Off by default (0.0); not exercised by the shipped training or
+            benchmark configs.
+        dose: Mean electron counts at the brightest host (non-dopant) column
+            peak, which sets the shot noise. A heavy dopant is much brighter
+            and receives proportionally more counts. Lower dose is noisier.
     """
 
     size: int = 192

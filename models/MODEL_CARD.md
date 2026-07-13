@@ -29,11 +29,14 @@ dopant, disordered). Both were trained only on synthetic data from
   feature bank (multi-scale Gaussians, Laplacians, difference-of-Gaussians,
   gradient magnitude, and local mean/standard-deviation texture). Defined in
   `stemseg.classical.RandomForestPixelClassifier` and `stemseg.features`.
-- **Settings**: 60 trees, max depth 13, `class_weight="balanced_subsample"`,
-  fit on natural-distribution pixels from the same simulator. This pairing was
-  chosen because it gave the best mean IoU during tuning; a doubly-balanced
-  variant (balanced sampling *and* balanced weights) over-predicts the rare
-  classes and collapses pixel accuracy.
+- **Settings**: 50 trees, max depth 12, min_samples_leaf 10,
+  `class_weight="balanced_subsample"`, fit on natural-distribution pixels from
+  the same simulator. This pairing was chosen because it gave the best mean IoU
+  during tuning; a doubly-balanced variant (balanced sampling *and* balanced
+  weights) over-predicts the rare classes and collapses pixel accuracy. The tree
+  depth and count were then trimmed to keep the pickle small with negligible
+  accuracy loss.
+- **Checkpoint size**: ~5.0 MB.
 - **Purpose**: the strong classical baseline, fair by construction because it
   learns from the same data as the U-Net. Only the model class differs.
 
@@ -60,10 +63,14 @@ from the seeded configs in `configs/`. Full tables in [RESULTS.md](../RESULTS.md
   its rare-class IoU still only reaches 0.02 to 0.04, versus the random forest's
   0.34 to 0.36 and the U-Net's 0.79 to 0.82. The U-Net's advantage is real, not
   a tuning artifact.
-- **Boundary localisation** (disordered region): the U-Net reaches 1.4 to 4.3 px
-  symmetric boundary error on the committed samples where the region is a
-  reasonable size, degrading only when the region is very small (a couple of
-  percent of the frame), where it is hard for every method.
+- **Boundary localisation** (disordered region): on the four committed samples
+  the U-Net's symmetric boundary error is 1.4, 15.7, 1.7 and 2.3 px for
+  graphene, hBN, MoS2 and oxide. The hBN outlier is a genuine failure, not a
+  small region: the model hallucinates a second small disordered patch away from
+  the true one, and a stray patch inflates the symmetric boundary distance
+  sharply. In the controlled imbalance sweep the error is 15 px when the region
+  is a couple of percent of the frame and falls to about 3 px once the region is
+  a tenth of the frame or more.
 
 ## Limitations and failure modes
 
@@ -77,6 +84,11 @@ from the seeded configs in `configs/`. Full tables in [RESULTS.md](../RESULTS.md
   partially. Treat vacancy predictions with caution.
 - **Faint sublattices**: pure-oxygen and light columns carry little contrast,
   so they are recovered less reliably than heavy columns.
+- **Easy dopant class**: with the default `dopant_z`, a dopant is a heavy
+  substitutional atom many times brighter than the host lattice, so the dopant
+  class is the easiest of the three rare classes here. A subtler, iso-electronic
+  dopant (set `dopant_z` closer to the host) would be genuinely hard; the
+  committed numbers reflect the heavy-dopant setting.
 - **Boundary precision**: the disordered-region boundary is localised to a few
   pixels at best; the reported boundary error quantifies this.
 - **Fixed pixel scale**: both models assume a column width close to the

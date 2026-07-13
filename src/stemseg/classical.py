@@ -162,8 +162,9 @@ class RandomForestPixelClassifier:
 def majority_smooth(labels: np.ndarray) -> np.ndarray:
     """A light 3x3 majority vote that removes isolated single-pixel flips.
 
-    Used by no method by default; provided for the tutorial to demonstrate
-    that simple post-processing does not close the rare-class gap.
+    An optional label-map post-processor, used by no method in the benchmark.
+    It cleans speckle but does not recover a class a method missed, so it does
+    not close the rare-class gap; kept as a small utility for experimentation.
     """
     from scipy.stats import mode
 

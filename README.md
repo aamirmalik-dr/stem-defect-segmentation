@@ -1,5 +1,7 @@
 # stem-defect-segmentation
 
+[![ci](https://github.com/aamirmalik-dr/stem-defect-segmentation/actions/workflows/ci.yml/badge.svg)](https://github.com/aamirmalik-dr/stem-defect-segmentation/actions/workflows/ci.yml)
+
 Pixel-level segmentation of point defects and local structure in simulated
 atomic-resolution STEM. A physics-motivated simulator paints every pixel with
 one of five classes, background, lattice, vacancy, dopant, and disordered, with
@@ -11,8 +13,9 @@ YAML config.
 
 ![Segmentation-overlay gallery: STEM image, ground-truth mask, and U-Net prediction across four materials](figures/gallery.png)
 
-Four synthetic materials, each with a substitutional dopant (bright, saturated),
-a scatter of vacancies, and an amorphous or grain-boundary region. The U-Net
+Four synthetic materials, each with a heavy substitutional dopant (bright, clipped
+to white by the display), a scatter of vacancies, and an amorphous or
+grain-boundary region. The U-Net
 prediction sits beside the exact ground truth. The class colours are fixed:
 background is near-black, lattice is grey-blue, and the three rare classes are
 the saturated yellow, red and purple.
@@ -78,11 +81,19 @@ boundary-localisation error drops from 15 px to 3 px.
 **Simulator** (`stemseg.sim`): projected 2D crystals with a multi-species basis,
 four presets (graphene, hexagonal boron nitride, MoS2, a square perovskite-like
 oxide). Column brightness is the sum of Z^1.7 over the atoms (incoherent
-Z-contrast), blurred by a Gaussian probe. A heavy dopant simply saturates, which
-is what a real detector does. Vacancies remove a column but keep its site
-labelled; a disordered region is a smooth blob of heavily jittered, thinned
-columns. Poisson shot noise is set by one dose parameter. The label map is built
-from geometry, never from the noisy image, so it is exact.
+Z-contrast), blurred by a Gaussian probe. The image is normalised to the
+brightest host column, so the dose parameter sets the shot noise at the host
+lattice; with the default `dopant_z` a dopant is a heavy substitutional atom
+several to tens of times brighter, and the figures clip it (a 97th-percentile
+display limit) so the faint lattice stays visible. Vacancies remove a column but
+keep its site labelled; a disordered region is a smooth blob of heavily jittered,
+thinned columns. Poisson shot noise is set by one dose parameter. The label map
+is built from geometry, never from the noisy image, so it is exact.
+
+Because the default dopant is that bright, the dopant class is the easiest of the
+three rare classes here; `dopant_z` is configurable for subtler, iso-electronic
+dopants where detection is genuinely hard. The vacancy class, defined by the
+absence of a column, is the one that separates the methods (see the results).
 
 **Methods** (`stemseg.classical`, `stemseg.net`): a threshold-and-morphology
 pipeline, a random forest over a 15-channel local feature bank
@@ -155,7 +166,8 @@ notebooks/       executed tutorial notebook
 docs/            API documentation
 figures/, results/  regenerable outputs of the committed configs
 scripts/         figure generation and notebook build
-tests/           47 pytest tests
+tests/           50 pytest tests (incl. a committed-artifact regression guard)
+.github/         CI workflow (pytest, ruff, black on Python 3.11)
 ```
 
 ## Scope and limitations
