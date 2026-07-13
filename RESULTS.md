@@ -59,9 +59,30 @@ forest grows more confident about the lattice and background and stops flagging
 the subtle holes. The U-Net, which sees spatial context, holds vacancy IoU
 between 0.57 and 0.70 across the whole dose range. This is the clearest example
 of where learning earns its keep, and it is a property of the task, not of tuning
-(see section 6).
+(see section 7).
 
-## 4. Every material (dose 200)
+## 4. Defect density (vacancy fraction)
+
+Sweeping the vacancy fraction from 0 to 15% of columns at fixed dose 200
+(`results/defect_sweep.json`, `figures/defect_sweep.png`):
+
+| vacancy fraction | method | pixel acc | vacancy IoU | rare-class mean IoU | mean IoU |
+|---|---|---|---|---|---|
+| 0.02 | threshold | 0.761 | 0.000 | 0.013 | 0.304 |
+| 0.02 | rf | 0.876 | 0.010 | 0.358 | 0.548 |
+| 0.02 | U-Net | 0.961 | **0.662** | **0.801** | **0.853** |
+| 0.05 | rf | 0.860 | 0.013 | 0.337 | 0.531 |
+| 0.05 | U-Net | 0.946 | **0.715** | **0.797** | **0.846** |
+| 0.15 | rf | 0.825 | 0.014 | 0.331 | 0.521 |
+| 0.15 | U-Net | 0.875 | **0.616** | **0.674** | **0.747** |
+
+The random forest's vacancy IoU never leaves the 0.01 band no matter how many
+vacancies are present: adding more of a class a local classifier cannot see does
+not help it. The U-Net recovers vacancies at every density (IoU 0.62 to 0.72),
+though its overall mean IoU falls at the highest defect density (0.75 at 15%)
+because that many missing columns genuinely disrupts the lattice it keys on.
+
+## 5. Every material (dose 200)
 
 `results/materials.json`, and the segmentation-overlay gallery
 `figures/gallery.png`. Mean IoU and the two hardest classes:
@@ -77,7 +98,7 @@ The oxide preset is hardest for the U-Net (mean IoU 0.763): it has the smallest
 spacing and a faint pure-oxygen sublattice, so the lattice class itself is
 harder.
 
-## 5. Class imbalance inflates accuracy; boundary error tells the truth
+## 6. Class imbalance inflates accuracy; boundary error tells the truth
 
 Sweeping the disordered-region area from 2% to 35% of the frame
 (`results/imbalance_sweep.json`, `figures/imbalance_sweep.png`):
@@ -94,10 +115,11 @@ Pixel accuracy barely moves while the disordered IoU swings from 0.61 to 0.89
 and the boundary error drops five-fold, exactly the behaviour a single accuracy
 number hides. The threshold baseline keeps a respectable-looking pixel accuracy
 here too (0.55 to 0.83) while its disordered IoU stays near 0.01 to 0.08. A
-small region is genuinely hard to localise for everyone: at 2% disorder every
-method's boundary error is large (43 to 46 px).
+small region is genuinely hard to localise for everyone: at 2% disorder even the
+U-Net's boundary error rises to 15 px, and the classical methods reach 43 to
+46 px.
 
-## 6. Honest check: the gap survives tuning the baseline to an oracle
+## 7. Honest check: the gap survives tuning the baseline to an oracle
 
 If the U-Net's rare-class lead came from an under-tuned baseline, it would not
 be worth reporting. `configs/fair_tuning.yaml` gives the threshold baseline the
@@ -116,17 +138,21 @@ Oracle tuning roughly triples the threshold baseline's rare-class IoU and it is
 still under 0.04. The U-Net's advantage over the balanced random forest (a
 factor of about 2.2) is real, not a tuning artifact.
 
-## 7. Committed-sample demo
+## 8. Committed-sample demo
 
 `stemseg demo` segments the four committed samples with all three methods
 (`results/metrics.json`). Mean IoU / boundary error (px):
 
 | sample | threshold | random forest | U-Net |
 |---|---|---|---|
-| graphene_d150 | 0.264 / 39.2 | 0.554 / 26.1 | **0.875 / 1.4** |
-| hbn_d150 | 0.235 / 40.0 | 0.492 / 28.4 | **0.855 / 15.7** |
-| mos2_d200 | 0.207 / 25.9 | 0.569 / 23.7 | **0.862 / 1.7** |
-| oxide_d250 | 0.120 / 35.2 | 0.484 / 34.5 | **0.798 / 2.3** |
+| graphene_d150 | 0.264 / 39.2 | 0.545 / 25.7 | **0.875 / 1.4** |
+| hbn_d150 | 0.235 / 40.0 | 0.484 / 28.2 | **0.855 / 15.7** |
+| mos2_d200 | 0.207 / 25.9 | 0.566 / 24.5 | **0.862 / 1.7** |
+| oxide_d250 | 0.120 / 35.2 | 0.475 / 33.3 | **0.798 / 2.3** |
+
+The hBN U-Net boundary error (15.7 px) is a real outlier: the model adds a
+spurious second disordered patch on that sample, and a stray patch inflates the
+symmetric boundary distance. The mean IoU is unaffected.
 
 ## Reproducing
 
