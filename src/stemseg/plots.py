@@ -227,14 +227,20 @@ def plot_confusion(payload: dict, path: str | Path) -> None:
     if len(names) == 1:
         axes = [axes]
     labels = payload["class_names"]
-    for ax, name in zip(axes, names):
+    for col, (ax, name) in enumerate(zip(axes, names)):
         cm = np.array(payload[name]["row_normalized"])
         im = ax.imshow(cm, cmap="magma", vmin=0, vmax=1)
         ax.set_title(f"{name}\npixel acc {payload[name]['pixel_accuracy']:.3f}", fontsize=10)
         ax.set_xticks(range(len(labels)))
         ax.set_yticks(range(len(labels)))
         ax.set_xticklabels(labels, rotation=45, ha="right", fontsize=8)
-        ax.set_yticklabels(labels, fontsize=8)
+        # Only the leftmost panel gets y-tick labels and the "true" y-label, so
+        # they never overlap the panel to their left.
+        if col == 0:
+            ax.set_yticklabels(labels, fontsize=8)
+            ax.set_ylabel("true")
+        else:
+            ax.set_yticklabels([])
         for i in range(len(labels)):
             for j in range(len(labels)):
                 ax.text(
@@ -246,7 +252,6 @@ def plot_confusion(payload: dict, path: str | Path) -> None:
                     color="white" if cm[i, j] < 0.6 else "black",
                     fontsize=7,
                 )
-        ax.set_ylabel("true")
         ax.set_xlabel("predicted")
     fig.colorbar(im, ax=axes, fraction=0.025, pad=0.02)
     Path(path).parent.mkdir(parents=True, exist_ok=True)
