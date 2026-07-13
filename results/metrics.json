@@ -1,0 +1,156 @@
+{
+  "samples": {
+    "graphene_d150": {
+      "threshold": {
+        "pixel_accuracy": 0.7046,
+        "mean_iou": 0.2644,
+        "boundary_error_px": 39.185,
+        "iou": {
+          "background": 0.6749,
+          "lattice": 0.5997,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.0472
+        }
+      },
+      "rf": {
+        "pixel_accuracy": 0.866,
+        "mean_iou": 0.5453,
+        "boundary_error_px": 25.703,
+        "iou": {
+          "background": 0.8531,
+          "lattice": 0.7886,
+          "vacancy": 0.0119,
+          "dopant": 0.7854,
+          "disordered": 0.2876
+        }
+      },
+      "unet": {
+        "pixel_accuracy": 0.9762,
+        "mean_iou": 0.8748,
+        "boundary_error_px": 1.406,
+        "iou": {
+          "background": 0.9688,
+          "lattice": 0.9291,
+          "vacancy": 0.5879,
+          "dopant": 0.9609,
+          "disordered": 0.9276
+        }
+      }
+    },
+    "hbn_d150": {
+      "threshold": {
+        "pixel_accuracy": 0.68,
+        "mean_iou": 0.2346,
+        "boundary_error_px": 40.034,
+        "iou": {
+          "background": 0.6885,
+          "lattice": 0.4303,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.0539
+        }
+      },
+      "rf": {
+        "pixel_accuracy": 0.8309,
+        "mean_iou": 0.4844,
+        "boundary_error_px": 28.189,
+        "iou": {
+          "background": 0.8134,
+          "lattice": 0.7224,
+          "vacancy": 0.0041,
+          "dopant": 0.6535,
+          "disordered": 0.2284
+        }
+      },
+      "unet": {
+        "pixel_accuracy": 0.9642,
+        "mean_iou": 0.8552,
+        "boundary_error_px": 15.723,
+        "iou": {
+          "background": 0.9517,
+          "lattice": 0.916,
+          "vacancy": 0.6331,
+          "dopant": 0.9022,
+          "disordered": 0.873
+        }
+      }
+    },
+    "mos2_d200": {
+      "threshold": {
+        "pixel_accuracy": 0.6183,
+        "mean_iou": 0.2074,
+        "boundary_error_px": 25.856,
+        "iou": {
+          "background": 0.63,
+          "lattice": 0.3611,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.0459
+        }
+      },
+      "rf": {
+        "pixel_accuracy": 0.8382,
+        "mean_iou": 0.5658,
+        "boundary_error_px": 24.543,
+        "iou": {
+          "background": 0.819,
+          "lattice": 0.7917,
+          "vacancy": 0.0937,
+          "dopant": 0.8793,
+          "disordered": 0.2454
+        }
+      },
+      "unet": {
+        "pixel_accuracy": 0.9691,
+        "mean_iou": 0.8617,
+        "boundary_error_px": 1.69,
+        "iou": {
+          "background": 0.9603,
+          "lattice": 0.9331,
+          "vacancy": 0.6369,
+          "dopant": 0.9281,
+          "disordered": 0.8503
+        }
+      }
+    },
+    "oxide_d250": {
+      "threshold": {
+        "pixel_accuracy": 0.4112,
+        "mean_iou": 0.1201,
+        "boundary_error_px": 35.212,
+        "iou": {
+          "background": 0.4149,
+          "lattice": 0.1285,
+          "vacancy": 0.0123,
+          "dopant": 0.0,
+          "disordered": 0.0451
+        }
+      },
+      "rf": {
+        "pixel_accuracy": 0.7424,
+        "mean_iou": 0.4751,
+        "boundary_error_px": 33.257,
+        "iou": {
+          "background": 0.6728,
+          "lattice": 0.5473,
+          "vacancy": 0.1017,
+          "dopant": 0.6366,
+          "disordered": 0.417
+        }
+      },
+      "unet": {
+        "pixel_accuracy": 0.9226,
+        "mean_iou": 0.7976,
+        "boundary_error_px": 2.318,
+        "iou": {
+          "background": 0.8795,
+          "lattice": 0.8277,
+          "vacancy": 0.5362,
+          "dopant": 0.8657,
+          "disordered": 0.8787
+        }
+      }
+    }
+  }
+}

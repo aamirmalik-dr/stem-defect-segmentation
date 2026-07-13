@@ -1,0 +1,408 @@
+{
+  "mode": "sweep",
+  "parameter": "dose",
+  "values": [
+    5,
+    15,
+    40,
+    100,
+    300,
+    1000
+  ],
+  "rows": [
+    {
+      "dose": 5,
+      "threshold": {
+        "pixel_accuracy": 0.7014657479745371,
+        "mean_iou": 0.2644271578896994,
+        "boundary_error_px": 31.040361447119995,
+        "iou": {
+          "background": 0.6741729299344602,
+          "lattice": 0.6107029388403494,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.037259920673687504
+        },
+        "dice": {
+          "background": 0.8053802780825664,
+          "lattice": 0.7583061086112309,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.07184297769740808
+        }
+      },
+      "rf": {
+        "pixel_accuracy": 0.7942979600694444,
+        "mean_iou": 0.4954305996850799,
+        "boundary_error_px": 16.47649563785811,
+        "iou": {
+          "background": 0.778586643429429,
+          "lattice": 0.6709987720016374,
+          "vacancy": 0.07040635119607229,
+          "dopant": 0.777262180974478,
+          "disordered": 0.17989905082378338
+        },
+        "dice": {
+          "background": 0.8755116275113554,
+          "lattice": 0.8031110294567947,
+          "vacancy": 0.13155069776519956,
+          "dopant": 0.8746736292428199,
+          "disordered": 0.30493973310374517
+        }
+      },
+      "unet": {
+        "pixel_accuracy": 0.9328658492476852,
+        "mean_iou": 0.8236356189965047,
+        "boundary_error_px": 3.5518217116799238,
+        "iou": {
+          "background": 0.9092367590790092,
+          "lattice": 0.8399232549399688,
+          "vacancy": 0.6501240694789082,
+          "dopant": 0.9378057302585604,
+          "disordered": 0.7810882812260771
+        },
+        "dice": {
+          "background": 0.952460981861268,
+          "lattice": 0.9129981402049,
+          "vacancy": 0.7879699248120301,
+          "dopant": 0.9679047962495492,
+          "disordered": 0.8770910341270524
+        }
+      }
+    },
+    {
+      "dose": 15,
+      "threshold": {
+        "pixel_accuracy": 0.7267930772569444,
+        "mean_iou": 0.28407661760738245,
+        "boundary_error_px": 44.26346060074789,
+        "iou": {
+          "background": 0.7036396370953507,
+          "lattice": 0.6763530693788594,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.040390381562702096
+        },
+        "dice": {
+          "background": 0.8260428106674402,
+          "lattice": 0.8069339111592633,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.07764466546112116
+        }
+      },
+      "rf": {
+        "pixel_accuracy": 0.8243001302083334,
+        "mean_iou": 0.5209479783453006,
+        "boundary_error_px": 21.42828002350292,
+        "iou": {
+          "background": 0.8096695716441351,
+          "lattice": 0.7414561664190193,
+          "vacancy": 0.07747290753977404,
+          "dopant": 0.7513542795232936,
+          "disordered": 0.22478696660028077
+        },
+        "dice": {
+          "background": 0.894825866921692,
+          "lattice": 0.8515358361774744,
+          "vacancy": 0.14380483629360155,
+          "dopant": 0.8580266006804825,
+          "disordered": 0.3670629631604201
+        }
+      },
+      "unet": {
+        "pixel_accuracy": 0.9444127965856481,
+        "mean_iou": 0.8329328337864211,
+        "boundary_error_px": 5.5146385325858995,
+        "iou": {
+          "background": 0.9246519135429877,
+          "lattice": 0.8838408248751409,
+          "vacancy": 0.6446360153256705,
+          "dopant": 0.9205298013245033,
+          "disordered": 0.7910056138638027
+        },
+        "dice": {
+          "background": 0.9608510578319027,
+          "lattice": 0.9383391772855555,
+          "vacancy": 0.7839254513686663,
+          "dopant": 0.9586206896551724,
+          "disordered": 0.8833089162209125
+        }
+      }
+    },
+    {
+      "dose": 40,
+      "threshold": {
+        "pixel_accuracy": 0.7203504774305556,
+        "mean_iou": 0.28275825518568054,
+        "boundary_error_px": 55.348291803991025,
+        "iou": {
+          "background": 0.6989678865437988,
+          "lattice": 0.7089878456180254,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.005835543766578249
+        },
+        "dice": {
+          "background": 0.8228147124848904,
+          "lattice": 0.8297166623342864,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.011603375527426161
+        }
+      },
+      "rf": {
+        "pixel_accuracy": 0.8500614872685185,
+        "mean_iou": 0.5531661755441153,
+        "boundary_error_px": 18.449267305461262,
+        "iou": {
+          "background": 0.8277296490384315,
+          "lattice": 0.7765916398713827,
+          "vacancy": 0.04875148632580262,
+          "dopant": 0.7726196115585031,
+          "disordered": 0.34013849092645654
+        },
+        "dice": {
+          "background": 0.9057462622810765,
+          "lattice": 0.8742488959675668,
+          "vacancy": 0.09297052154195011,
+          "dopant": 0.8717263495456975,
+          "disordered": 0.5076169265033408
+        }
+      },
+      "unet": {
+        "pixel_accuracy": 0.9579490379050926,
+        "mean_iou": 0.8667593294275798,
+        "boundary_error_px": 2.6432634672362787,
+        "iou": {
+          "background": 0.9420929045431342,
+          "lattice": 0.9073107586093532,
+          "vacancy": 0.7023076923076923,
+          "dopant": 0.9358533791523482,
+          "disordered": 0.8462319125253716
+        },
+        "dice": {
+          "background": 0.9701831486426814,
+          "lattice": 0.9514031780231619,
+          "vacancy": 0.8251242657026661,
+          "dopant": 0.9668639053254438,
+          "disordered": 0.9167124745101516
+        }
+      }
+    },
+    {
+      "dose": 100,
+      "threshold": {
+        "pixel_accuracy": 0.7350667317708334,
+        "mean_iou": 0.29348391798303686,
+        "boundary_error_px": 35.69195746520807,
+        "iou": {
+          "background": 0.715369053675157,
+          "lattice": 0.727778878898719,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.024271657341308123
+        },
+        "dice": {
+          "background": 0.8340701403496672,
+          "lattice": 0.8424444676191469,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.04739300783604581
+        }
+      },
+      "rf": {
+        "pixel_accuracy": 0.8408429181134259,
+        "mean_iou": 0.5307152474991316,
+        "boundary_error_px": 20.61705485751031,
+        "iou": {
+          "background": 0.8185257543337364,
+          "lattice": 0.7879337802303619,
+          "vacancy": 0.009872611464968152,
+          "dopant": 0.7639545884578998,
+          "disordered": 0.27328950300869176
+        },
+        "dice": {
+          "background": 0.9002080420176665,
+          "lattice": 0.881390338884746,
+          "vacancy": 0.019552191737622203,
+          "dopant": 0.8661839635290963,
+          "disordered": 0.42926530433641097
+        }
+      },
+      "unet": {
+        "pixel_accuracy": 0.9566017433449074,
+        "mean_iou": 0.8530866581364487,
+        "boundary_error_px": 4.737179679532223,
+        "iou": {
+          "background": 0.9410096310806398,
+          "lattice": 0.9112037648612946,
+          "vacancy": 0.672265625,
+          "dopant": 0.909601347557552,
+          "disordered": 0.8313529221827575
+        },
+        "dice": {
+          "background": 0.9696084099868594,
+          "lattice": 0.9535391062055857,
+          "vacancy": 0.8040177528614809,
+          "dopant": 0.9526609820640988,
+          "disordered": 0.9079112082797045
+        }
+      }
+    },
+    {
+      "dose": 300,
+      "threshold": {
+        "pixel_accuracy": 0.7461480034722222,
+        "mean_iou": 0.3008455264980056,
+        "boundary_error_px": 37.31086198885292,
+        "iou": {
+          "background": 0.7219547697025013,
+          "lattice": 0.7336417246371694,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.04863113815035752
+        },
+        "dice": {
+          "background": 0.8385293068147568,
+          "lattice": 0.8463590997046543,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.09275165762507534
+        }
+      },
+      "rf": {
+        "pixel_accuracy": 0.8643708405671297,
+        "mean_iou": 0.5450446171339078,
+        "boundary_error_px": 16.272450426043743,
+        "iou": {
+          "background": 0.8475447889271648,
+          "lattice": 0.798682310469314,
+          "vacancy": 0.0069617105917454,
+          "dopant": 0.7942307692307692,
+          "disordered": 0.2778035064505458
+        },
+        "dice": {
+          "background": 0.9174822651193408,
+          "lattice": 0.8880749044125764,
+          "vacancy": 0.013827160493827161,
+          "dopant": 0.8853161843515541,
+          "disordered": 0.4348141244692969
+        }
+      },
+      "unet": {
+        "pixel_accuracy": 0.9532199435763888,
+        "mean_iou": 0.8277027796801839,
+        "boundary_error_px": 3.3995075378707935,
+        "iou": {
+          "background": 0.9388665532180316,
+          "lattice": 0.9102013666324,
+          "vacancy": 0.5652400835073069,
+          "dopant": 0.9260089686098655,
+          "disordered": 0.7981969264333152
+        },
+        "dice": {
+          "background": 0.9684694923018284,
+          "lattice": 0.9529899648611858,
+          "vacancy": 0.7222407469156386,
+          "dopant": 0.9615832363213038,
+          "disordered": 0.8877747644875821
+        }
+      }
+    },
+    {
+      "dose": 1000,
+      "threshold": {
+        "pixel_accuracy": 0.7431685836226852,
+        "mean_iou": 0.30055822432263135,
+        "boundary_error_px": 41.117654681232835,
+        "iou": {
+          "background": 0.7161351923567332,
+          "lattice": 0.7419661600846895,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.04468976917173387
+        },
+        "dice": {
+          "background": 0.8345906494386138,
+          "lattice": 0.8518720708657362,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.08555605786618445
+        }
+      },
+      "rf": {
+        "pixel_accuracy": 0.8690728081597222,
+        "mean_iou": 0.5539774307356419,
+        "boundary_error_px": 17.17701442435265,
+        "iou": {
+          "background": 0.8489436729599001,
+          "lattice": 0.8112692676451065,
+          "vacancy": 0.004568106312292359,
+          "dopant": 0.7607709750566893,
+          "disordered": 0.34433513170422086
+        },
+        "dice": {
+          "background": 0.9183012823758553,
+          "lattice": 0.8958019463333198,
+          "vacancy": 0.009094667217858619,
+          "dopant": 0.8641339343206696,
+          "disordered": 0.512275731822474
+        }
+      },
+      "unet": {
+        "pixel_accuracy": 0.9581117983217593,
+        "mean_iou": 0.8576493191985282,
+        "boundary_error_px": 3.0931625801706937,
+        "iou": {
+          "background": 0.9431057883142481,
+          "lattice": 0.9187174972359854,
+          "vacancy": 0.6744186046511628,
+          "dopant": 0.924812030075188,
+          "disordered": 0.8271926757160568
+        },
+        "dice": {
+          "background": 0.970719961811698,
+          "lattice": 0.9576370659666645,
+          "vacancy": 0.8055555555555556,
+          "dopant": 0.9609375,
+          "disordered": 0.9054246842270086
+        }
+      }
+    }
+  ],
+  "config": {
+    "name": "dose_sweep",
+    "mode": "sweep",
+    "seed": 20,
+    "images_per_condition": 6,
+    "methods": [
+      "threshold",
+      "rf",
+      "unet"
+    ],
+    "models": {
+      "unet": "models/unet.pt",
+      "rf": "models/rf.pkl"
+    },
+    "base_config": {
+      "size": 192,
+      "material": "graphene",
+      "rotation_deg": 15.0,
+      "vacancy_fraction": 0.03,
+      "dopant_fraction": 0.03,
+      "disorder_fraction": 0.12
+    },
+    "sweep": {
+      "parameter": "dose",
+      "values": [
+        5,
+        15,
+        40,
+        100,
+        300,
+        1000
+      ]
+    }
+  }
+}

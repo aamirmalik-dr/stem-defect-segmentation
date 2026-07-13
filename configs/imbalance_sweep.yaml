@@ -1,0 +1,18 @@
+name: imbalance_sweep
+mode: sweep
+seed: 22
+images_per_condition: 6
+methods: [threshold, rf, unet]
+models:
+  unet: models/unet.pt
+  rf: models/rf.pkl
+base_config:
+  size: 192
+  material: graphene
+  rotation_deg: 15.0
+  dose: 200.0
+  vacancy_fraction: 0.03
+  dopant_fraction: 0.03
+sweep:
+  parameter: disorder_fraction
+  values: [0.02, 0.06, 0.12, 0.22, 0.35]

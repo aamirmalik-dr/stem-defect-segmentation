@@ -1,0 +1,399 @@
+{
+  "mode": "fair_tuning",
+  "parameter": "dose",
+  "values": [
+    15,
+    40,
+    100,
+    300
+  ],
+  "rows": [
+    {
+      "dose": 15,
+      "threshold_default": {
+        "pixel_accuracy": 0.7209020543981481,
+        "mean_iou": 0.28009502761769756,
+        "boundary_error_px": 29.477109264188005,
+        "iou": {
+          "background": 0.6970518805756828,
+          "lattice": 0.6779273426537082,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.02549591485909644
+        },
+        "dice": {
+          "background": 0.8214856464367197,
+          "lattice": 0.808053275514945,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.04972406908632023
+        },
+        "rare_mean_iou": 0.008498638286365481
+      },
+      "threshold_oracle": {
+        "pixel_accuracy": 0.6193124276620371,
+        "mean_iou": 0.23360455582442968,
+        "boundary_error_px": 25.99655738430599,
+        "iou": {
+          "background": 0.5774185751404919,
+          "lattice": 0.5251126030424067,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.0654916009392498
+        },
+        "dice": {
+          "background": 0.7321057127643681,
+          "lattice": 0.6886214198150006,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.12293217681212652
+        },
+        "rare_mean_iou": 0.0218305336464166,
+        "params": {
+          "lattice_pct": 60.0,
+          "dopant_pct": 96.0,
+          "disorder_pct": 80.0,
+          "vacancy_strength": 0.25
+        }
+      },
+      "rf": {
+        "pixel_accuracy": 0.7972728587962963,
+        "mean_iou": 0.5054844641712576,
+        "boundary_error_px": 14.272077576107563,
+        "iou": {
+          "background": 0.7737932146023048,
+          "lattice": 0.7331180009583473,
+          "vacancy": 0.048516490513179675,
+          "dopant": 0.7561097256857855,
+          "disordered": 0.2158848890966703
+        },
+        "dice": {
+          "background": 0.87247285448185,
+          "lattice": 0.8460104857868436,
+          "vacancy": 0.09254311391790139,
+          "dopant": 0.8611190002840102,
+          "disordered": 0.35510744649036613
+        },
+        "rare_mean_iou": 0.3401703684318785
+      },
+      "unet": {
+        "pixel_accuracy": 0.9456425419560185,
+        "mean_iou": 0.8342333775459421,
+        "boundary_error_px": 3.5198210568550823,
+        "iou": {
+          "background": 0.9250751613012195,
+          "lattice": 0.8817044816804297,
+          "vacancy": 0.6283039647577092,
+          "dopant": 0.9328817733990148,
+          "disordered": 0.803201506591337
+        },
+        "dice": {
+          "background": 0.9610795255141433,
+          "lattice": 0.9371338488741185,
+          "vacancy": 0.7717281028068989,
+          "dopant": 0.9652755654667091,
+          "disordered": 0.8908616187989556
+        },
+        "rare_mean_iou": 0.788129081582687
+      }
+    },
+    {
+      "dose": 40,
+      "threshold_default": {
+        "pixel_accuracy": 0.7339274088541666,
+        "mean_iou": 0.2912666798174576,
+        "boundary_error_px": 35.24492573867556,
+        "iou": {
+          "background": 0.7108448696948014,
+          "lattice": 0.7087559876021414,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.03673254179034526
+        },
+        "dice": {
+          "background": 0.8309869378415465,
+          "lattice": 0.8295578687004019,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.07086213716589124
+        },
+        "rare_mean_iou": 0.012244180596781755
+      },
+      "threshold_oracle": {
+        "pixel_accuracy": 0.6290690104166666,
+        "mean_iou": 0.23988719129464098,
+        "boundary_error_px": 29.604656347474446,
+        "iou": {
+          "background": 0.585583947137098,
+          "lattice": 0.5224649364361437,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.09138707289996299
+        },
+        "dice": {
+          "background": 0.7386350602179316,
+          "lattice": 0.6863408462583759,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.16746959015582838
+        },
+        "rare_mean_iou": 0.030462357633321,
+        "params": {
+          "lattice_pct": 60.0,
+          "dopant_pct": 96.0,
+          "disorder_pct": 80.0,
+          "vacancy_strength": 0.25
+        }
+      },
+      "rf": {
+        "pixel_accuracy": 0.8513454861111112,
+        "mean_iou": 0.5400792853504849,
+        "boundary_error_px": 20.023067891099227,
+        "iou": {
+          "background": 0.8309911970099341,
+          "lattice": 0.7777817932131112,
+          "vacancy": 0.04376548307184145,
+          "dopant": 0.7693574958813838,
+          "disordered": 0.27850045757615377
+        },
+        "dice": {
+          "background": 0.9076954584674888,
+          "lattice": 0.8750025410119326,
+          "vacancy": 0.08386075949367089,
+          "dopant": 0.8696461824953445,
+          "disordered": 0.43566735690364805
+        },
+        "rare_mean_iou": 0.36387447884312635
+      },
+      "unet": {
+        "pixel_accuracy": 0.9561541521990741,
+        "mean_iou": 0.8614388343900765,
+        "boundary_error_px": 3.921448605192498,
+        "iou": {
+          "background": 0.940082672722081,
+          "lattice": 0.9047957299129341,
+          "vacancy": 0.6907216494845361,
+          "dopant": 0.9379586390927285,
+          "disordered": 0.8336354807381029
+        },
+        "dice": {
+          "background": 0.9691160958652084,
+          "lattice": 0.9500186457833892,
+          "vacancy": 0.8170731707317073,
+          "dopant": 0.9679862306368331,
+          "disordered": 0.909270669656256
+        },
+        "rare_mean_iou": 0.8207719231051224
+      }
+    },
+    {
+      "dose": 100,
+      "threshold_default": {
+        "pixel_accuracy": 0.7299895109953703,
+        "mean_iou": 0.28980235911948676,
+        "boundary_error_px": 36.834938611479714,
+        "iou": {
+          "background": 0.7061144567622247,
+          "lattice": 0.7178345854079066,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.02506275342730257
+        },
+        "dice": {
+          "background": 0.8277457048248124,
+          "lattice": 0.8357435477263416,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.04889993972272453
+        },
+        "rare_mean_iou": 0.00835425114243419
+      },
+      "threshold_oracle": {
+        "pixel_accuracy": 0.6348334418402778,
+        "mean_iou": 0.24410283726136925,
+        "boundary_error_px": 23.543470749865588,
+        "iou": {
+          "background": 0.5860113306886973,
+          "lattice": 0.521124955500178,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.1133779001179709
+        },
+        "dice": {
+          "background": 0.7389749610858483,
+          "lattice": 0.685183624942661,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.2036647217552237
+        },
+        "rare_mean_iou": 0.03779263337265697,
+        "params": {
+          "lattice_pct": 60.0,
+          "dopant_pct": 96.0,
+          "disorder_pct": 80.0,
+          "vacancy_strength": 0.25
+        }
+      },
+      "rf": {
+        "pixel_accuracy": 0.8538230613425926,
+        "mean_iou": 0.5348659996949983,
+        "boundary_error_px": 14.848880957393286,
+        "iou": {
+          "background": 0.8358493787115734,
+          "lattice": 0.7872795003834776,
+          "vacancy": 0.01706036745406824,
+          "dopant": 0.7913625304136253,
+          "disordered": 0.24277822151224707
+        },
+        "dice": {
+          "background": 0.9105860082031185,
+          "lattice": 0.8809808429118774,
+          "vacancy": 0.03354838709677419,
+          "dopant": 0.8835314091680815,
+          "disordered": 0.39070240741236645
+        },
+        "rare_mean_iou": 0.3504003731266469
+      },
+      "unet": {
+        "pixel_accuracy": 0.9471842447916666,
+        "mean_iou": 0.8410281861851617,
+        "boundary_error_px": 6.4708474243623995,
+        "iou": {
+          "background": 0.9299825840862088,
+          "lattice": 0.9050182538209269,
+          "vacancy": 0.6518942101501072,
+          "dopant": 0.9414316702819957,
+          "disordered": 0.7768142125865704
+        },
+        "dice": {
+          "background": 0.9637212187865714,
+          "lattice": 0.9501412934030598,
+          "vacancy": 0.7892687148420597,
+          "dopant": 0.9698324022346368,
+          "disordered": 0.8743899132321041
+        },
+        "rare_mean_iou": 0.7900466976728912
+      }
+    },
+    {
+      "dose": 300,
+      "threshold_default": {
+        "pixel_accuracy": 0.7397144458912037,
+        "mean_iou": 0.29786258987738723,
+        "boundary_error_px": 32.89161695499104,
+        "iou": {
+          "background": 0.7156417786479191,
+          "lattice": 0.7385550594437571,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.03511611129526001
+        },
+        "dice": {
+          "background": 0.8342554810152846,
+          "lattice": 0.8496194071415311,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.06784960819770947
+        },
+        "rare_mean_iou": 0.011705370431753336
+      },
+      "threshold_oracle": {
+        "pixel_accuracy": 0.6357286241319444,
+        "mean_iou": 0.24562350674694647,
+        "boundary_error_px": 22.659334225057027,
+        "iou": {
+          "background": 0.5827311480586357,
+          "lattice": 0.5305687708584819,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.11481761481761482
+        },
+        "dice": {
+          "background": 0.7363615087419094,
+          "lattice": 0.6932962189747158,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.20598457234890227
+        },
+        "rare_mean_iou": 0.03827253827253827,
+        "params": {
+          "lattice_pct": 60.0,
+          "dopant_pct": 96.0,
+          "disorder_pct": 80.0,
+          "vacancy_strength": 0.25
+        }
+      },
+      "rf": {
+        "pixel_accuracy": 0.8594609013310185,
+        "mean_iou": 0.5412839842917392,
+        "boundary_error_px": 18.999609811514734,
+        "iou": {
+          "background": 0.840927467005013,
+          "lattice": 0.801835813161596,
+          "vacancy": 0.0050968399592252805,
+          "dopant": 0.7477477477477478,
+          "disordered": 0.3108120535851139
+        },
+        "dice": {
+          "background": 0.9135910915307377,
+          "lattice": 0.8900209523026992,
+          "vacancy": 0.010141987829614604,
+          "dopant": 0.8556701030927835,
+          "disordered": 0.47422825070159025
+        },
+        "rare_mean_iou": 0.35455221376402896
+      },
+      "unet": {
+        "pixel_accuracy": 0.9513346354166666,
+        "mean_iou": 0.8444811495718074,
+        "boundary_error_px": 6.568593855664207,
+        "iou": {
+          "background": 0.9342569732090025,
+          "lattice": 0.9146663367153345,
+          "vacancy": 0.6688077077478924,
+          "dopant": 0.9135483870967742,
+          "disordered": 0.7911263430900334
+        },
+        "dice": {
+          "background": 0.9660112241022828,
+          "lattice": 0.955431574865907,
+          "vacancy": 0.8015395718065913,
+          "dopant": 0.9548213081591369,
+          "disordered": 0.8833841857578735
+        },
+        "rare_mean_iou": 0.7911608126449
+      }
+    }
+  ],
+  "config": {
+    "name": "fair_tuning",
+    "mode": "fair_tuning",
+    "seed": 24,
+    "images_per_condition": 6,
+    "methods": [
+      "rf",
+      "unet"
+    ],
+    "models": {
+      "unet": "models/unet.pt",
+      "rf": "models/rf.pkl"
+    },
+    "base_config": {
+      "size": 192,
+      "material": "graphene",
+      "rotation_deg": 15.0,
+      "vacancy_fraction": 0.03,
+      "dopant_fraction": 0.03,
+      "disorder_fraction": 0.12
+    },
+    "sweep": {
+      "parameter": "dose",
+      "values": [
+        15,
+        40,
+        100,
+        300
+      ]
+    }
+  }
+}

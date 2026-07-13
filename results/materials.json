@@ -1,0 +1,274 @@
+{
+  "mode": "materials",
+  "rows": [
+    {
+      "preset": "graphene",
+      "threshold": {
+        "pixel_accuracy": 0.7163040726273148,
+        "mean_iou": 0.2669412225809659,
+        "boundary_error_px": 29.17395092335831,
+        "iou": {
+          "background": 0.7006587124036788,
+          "lattice": 0.5697330460504693,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.06431435445068164
+        },
+        "dice": {
+          "background": 0.8239850915335989,
+          "lattice": 0.7258980085613251,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.12085593731163351
+        }
+      },
+      "rf": {
+        "pixel_accuracy": 0.8411006221064815,
+        "mean_iou": 0.5118066329029596,
+        "boundary_error_px": 19.15904493637346,
+        "iou": {
+          "background": 0.8228459147164057,
+          "lattice": 0.7523416615799112,
+          "vacancy": 0.006006006006006006,
+          "dopant": 0.7241379310344828,
+          "disordered": 0.25370165117799187
+        },
+        "dice": {
+          "background": 0.9028145583489126,
+          "lattice": 0.858670061980493,
+          "vacancy": 0.011940298507462687,
+          "dopant": 0.84,
+          "disordered": 0.40472412386090584
+        }
+      },
+      "unet": {
+        "pixel_accuracy": 0.9589888961226852,
+        "mean_iou": 0.8185813436638872,
+        "boundary_error_px": 2.9338247353856333,
+        "iou": {
+          "background": 0.948220434821281,
+          "lattice": 0.9196778909034955,
+          "vacancy": 0.5314379442318207,
+          "dopant": 0.8837592745259687,
+          "disordered": 0.8098111738368697
+        },
+        "dice": {
+          "background": 0.9734221219256081,
+          "lattice": 0.9581585486413552,
+          "vacancy": 0.6940378436272759,
+          "dopant": 0.9382932166301969,
+          "disordered": 0.8949123373131117
+        }
+      }
+    },
+    {
+      "preset": "hbn",
+      "threshold": {
+        "pixel_accuracy": 0.6926586009837963,
+        "mean_iou": 0.2476309791136136,
+        "boundary_error_px": 43.18665467193444,
+        "iou": {
+          "background": 0.6827304074709528,
+          "lattice": 0.5284387644154501,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.026985723681665182
+        },
+        "dice": {
+          "background": 0.811455482636767,
+          "lattice": 0.6914752186588922,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.05255325962063705
+        }
+      },
+      "rf": {
+        "pixel_accuracy": 0.8395001446759259,
+        "mean_iou": 0.5184105486455173,
+        "boundary_error_px": 25.775976044365724,
+        "iou": {
+          "background": 0.8222184595263674,
+          "lattice": 0.772861421901154,
+          "vacancy": 0.006535947712418301,
+          "dopant": 0.754863813229572,
+          "disordered": 0.23557310085807495
+        },
+        "dice": {
+          "background": 0.9024367580384178,
+          "lattice": 0.8718802410087583,
+          "vacancy": 0.012987012987012988,
+          "dopant": 0.8603104212860311,
+          "disordered": 0.3813179498557799
+        }
+      },
+      "unet": {
+        "pixel_accuracy": 0.9603316695601852,
+        "mean_iou": 0.8257631849196878,
+        "boundary_error_px": 3.4435974670552465,
+        "iou": {
+          "background": 0.9507516881131355,
+          "lattice": 0.9189064186237731,
+          "vacancy": 0.533065236818588,
+          "dopant": 0.906055900621118,
+          "disordered": 0.8200366804218249
+        },
+        "dice": {
+          "background": 0.9747541872258996,
+          "lattice": 0.957739689341189,
+          "vacancy": 0.6954240746138152,
+          "dopant": 0.9507128309572301,
+          "disordered": 0.9011210479909308
+        }
+      }
+    },
+    {
+      "preset": "mos2",
+      "threshold": {
+        "pixel_accuracy": 0.5981852213541666,
+        "mean_iou": 0.19694101794518004,
+        "boundary_error_px": 31.09625532920781,
+        "iou": {
+          "background": 0.6174568664382605,
+          "lattice": 0.3265731144939753,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.04067510879366448
+        },
+        "dice": {
+          "background": 0.7634909829749444,
+          "lattice": 0.492355997458229,
+          "vacancy": 0.0,
+          "dopant": 0.0,
+          "disordered": 0.07817061914897624
+        }
+      },
+      "rf": {
+        "pixel_accuracy": 0.8271393952546297,
+        "mean_iou": 0.5366103174147001,
+        "boundary_error_px": 24.948605010492923,
+        "iou": {
+          "background": 0.8032233703339646,
+          "lattice": 0.7626698816308637,
+          "vacancy": 0.07637976346911958,
+          "dopant": 0.7212903225806452,
+          "disordered": 0.3194882490589073
+        },
+        "dice": {
+          "background": 0.8908750668922445,
+          "lattice": 0.8653575914342209,
+          "vacancy": 0.14191973142072334,
+          "dopant": 0.8380809595202399,
+          "disordered": 0.48426084777454365
+        }
+      },
+      "unet": {
+        "pixel_accuracy": 0.9604401765046297,
+        "mean_iou": 0.837735464268141,
+        "boundary_error_px": 2.9970507945996796,
+        "iou": {
+          "background": 0.949893997911983,
+          "lattice": 0.9322993408297789,
+          "vacancy": 0.5783734666060881,
+          "dopant": 0.9183673469387755,
+          "disordered": 0.8097431690540796
+        },
+        "dice": {
+          "background": 0.9743032174355774,
+          "lattice": 0.96496367941566,
+          "vacancy": 0.7328727691421992,
+          "dopant": 0.9574468085106383,
+          "disordered": 0.8948708113950975
+        }
+      }
+    },
+    {
+      "preset": "oxide",
+      "threshold": {
+        "pixel_accuracy": 0.39567961516203703,
+        "mean_iou": 0.11495946354210003,
+        "boundary_error_px": 27.818378457192015,
+        "iou": {
+          "background": 0.4075812873258129,
+          "lattice": 0.11464143032316759,
+          "vacancy": 0.014726617577941407,
+          "dopant": 0.0,
+          "disordered": 0.03784798248357835
+        },
+        "dice": {
+          "background": 0.5791229124680315,
+          "lattice": 0.2057010033978903,
+          "vacancy": 0.02902578354176316,
+          "dopant": 0.0,
+          "disordered": 0.07293550331525014
+        }
+      },
+      "rf": {
+        "pixel_accuracy": 0.721435546875,
+        "mean_iou": 0.46223682172175673,
+        "boundary_error_px": 20.15987912636918,
+        "iou": {
+          "background": 0.6479977462620933,
+          "lattice": 0.5322131100533348,
+          "vacancy": 0.09612263300270514,
+          "dopant": 0.6441048034934498,
+          "disordered": 0.39074581579720075
+        },
+        "dice": {
+          "background": 0.7864061073285441,
+          "lattice": 0.6946985462548471,
+          "vacancy": 0.17538664034221785,
+          "dopant": 0.7835325365205843,
+          "disordered": 0.561922691204673
+        }
+      },
+      "unet": {
+        "pixel_accuracy": 0.9124620225694444,
+        "mean_iou": 0.7633152299160263,
+        "boundary_error_px": 2.9261514326149807,
+        "iou": {
+          "background": 0.8659193928664989,
+          "lattice": 0.816885683486474,
+          "vacancy": 0.4482299707213202,
+          "dopant": 0.8544532947139754,
+          "disordered": 0.831087807791863
+        },
+        "dice": {
+          "background": 0.9281423368843811,
+          "lattice": 0.8992152791021267,
+          "vacancy": 0.6190038595846352,
+          "dopant": 0.9215150331901601,
+          "disordered": 0.9077530899996376
+        }
+      }
+    }
+  ],
+  "config": {
+    "name": "materials",
+    "mode": "materials",
+    "seed": 23,
+    "images_per_condition": 6,
+    "methods": [
+      "threshold",
+      "rf",
+      "unet"
+    ],
+    "models": {
+      "unet": "models/unet.pt",
+      "rf": "models/rf.pkl"
+    },
+    "presets": [
+      "graphene",
+      "hbn",
+      "mos2",
+      "oxide"
+    ],
+    "preset_overrides": {
+      "size": 192,
+      "rotation_deg": 15.0,
+      "dose": 200.0,
+      "vacancy_fraction": 0.03,
+      "dopant_fraction": 0.03,
+      "disorder_fraction": 0.12
+    }
+  }
+}

@@ -1,0 +1,16 @@
+name: materials
+mode: materials
+seed: 23
+images_per_condition: 6
+methods: [threshold, rf, unet]
+models:
+  unet: models/unet.pt
+  rf: models/rf.pkl
+presets: [graphene, hbn, mos2, oxide]
+preset_overrides:
+  size: 192
+  rotation_deg: 15.0
+  dose: 200.0
+  vacancy_fraction: 0.03
+  dopant_fraction: 0.03
+  disorder_fraction: 0.12

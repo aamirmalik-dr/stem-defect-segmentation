@@ -1,0 +1,17 @@
+name: confusion
+mode: confusion
+seed: 25
+images_per_condition: 8
+methods: [threshold, rf, unet]
+models:
+  unet: models/unet.pt
+  rf: models/rf.pkl
+base_config:
+  size: 192
+  material: graphene
+  rotation_deg: 15.0
+  vacancy_fraction: 0.04
+  dopant_fraction: 0.04
+  disorder_fraction: 0.12
+condition:
+  dose: 100.0

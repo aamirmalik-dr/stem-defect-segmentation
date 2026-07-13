@@ -1,0 +1,18 @@
+name: dose_sweep
+mode: sweep
+seed: 20
+images_per_condition: 6
+methods: [threshold, rf, unet]
+models:
+  unet: models/unet.pt
+  rf: models/rf.pkl
+base_config:
+  size: 192
+  material: graphene
+  rotation_deg: 15.0
+  vacancy_fraction: 0.03
+  dopant_fraction: 0.03
+  disorder_fraction: 0.12
+sweep:
+  parameter: dose
+  values: [5, 15, 40, 100, 300, 1000]
