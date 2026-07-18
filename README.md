@@ -1,5 +1,7 @@
 # stem-defect-segmentation
 
+*Origin: Originally developed during the 4th Summer School on ML/AI for Electron Microscopy (June 2026); refactored and open-sourced in July 2026.*
+
 [![ci](https://github.com/aamirmalik-dr/stem-defect-segmentation/actions/workflows/ci.yml/badge.svg)](https://github.com/aamirmalik-dr/stem-defect-segmentation/actions/workflows/ci.yml)
 
 Pixel-level segmentation of point defects and local structure in simulated
