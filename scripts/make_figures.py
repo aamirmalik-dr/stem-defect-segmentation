@@ -34,7 +34,9 @@ def make_gallery() -> None:
     for name, *_ in SAMPLES:
         sample = load_sample(ROOT / "data" / "sample" / f"{name}.npz")
         rows.append((name, sample.image, sample.labels, predict(sample.image)))
-    gallery(rows, ROOT / "figures" / "gallery.png")
+    # Higher dpi so the short side clears 1080 px for social posts; the
+    # layout, colormaps and fonts are unchanged.
+    gallery(rows, ROOT / "figures" / "gallery.png", dpi=130)
     print("saved figures/gallery.png")
 
 
