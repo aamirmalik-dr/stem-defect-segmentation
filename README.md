@@ -189,7 +189,7 @@ tests/           50 pytest tests (incl. a committed-artifact regression guard)
 Aamir Malik
 
 - GitHub: https://github.com/aamirmalik-dr
-- LinkedIn: https://linkedin.com/in/dr-aamirmalik
+- LinkedIn: https://linkedin.com/in/aamirmalik-dr
 
 ## License
 
