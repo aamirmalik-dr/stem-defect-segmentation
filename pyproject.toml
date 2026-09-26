@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "stemseg"
-version = "0.1.0"
+version = "0.1.1"
 description = "Pixel-level defect segmentation for simulated atomic-resolution STEM: a labelled simulator, classical baselines, a multi-class U-Net, and a per-class IoU/Dice/boundary benchmark"
 readme = "README.md"
 requires-python = ">=3.10"
