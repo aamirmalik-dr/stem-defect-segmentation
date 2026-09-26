@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this code, data, or benchmark results, please cite the repository."
+title: "stem-defect-segmentation: pixel-level defect segmentation benchmark for simulated atomic-resolution STEM"
+type: software
+authors:
+  - family-names: Malik
+    given-names: Aamir
+version: 0.1.0
+date-released: "2026-07-13"
+license: MIT
+repository-code: "https://github.com/aamirmalik-dr/stem-defect-segmentation"
+keywords:
+  - electron microscopy
+  - STEM
+  - semantic segmentation
+  - point defects
+  - U-Net
+  - benchmark
+  - PyTorch
